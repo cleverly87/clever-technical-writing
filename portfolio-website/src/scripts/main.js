@@ -15,3 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Example: Image gallery functionality can be added here
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60, // Adjust for fixed header
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});

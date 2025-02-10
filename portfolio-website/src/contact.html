@@ -8,24 +8,41 @@
 </head>
 <body>
     <header>
-        <h1>Contact</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
+            <div class="nav-left">
+                <h1>Contact</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Contact</h2>
-            <p>Provide your contact information or a contact form.</p>
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, please fill out the form below or connect with me on LinkedIn.</p>
+            <form id="contact-form" action="https://formspree.io/f/mzzdvlwe" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <p>Or connect with me on <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>.</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
