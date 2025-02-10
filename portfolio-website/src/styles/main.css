@@ -1,14 +1,39 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --button-background: #3498db;
+    --button-text: #fff;
+    --button-hover-background: #2980b9;
+    --input-background: #fff;
+    --input-text: #2c3e50;
+    --input-border: #ddd;
+}
+
+body.dark-mode {
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --button-background: #3498db;
+    --button-text: #fff;
+    --button-hover-background: #2980b9;
+    --input-background: #34495e;
+    --input-text: #ecf0f1;
+    --input-border: #555;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--button-text);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -17,6 +42,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -35,21 +61,17 @@ nav {
     margin: 0;
     padding-left: 1rem;
     white-space: nowrap;
+    color: #fff; /* Ensure text remains white */
+}
+
+body.dark-mode .nav-left h1 {
+    color: #fff; /* Ensure text remains white in dark mode */
 }
 
 .nav-right {
     display: flex;
     align-items: center;
     margin-left: 1rem;
-}
-
-.nav-right::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 2rem;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-    margin-right: 1rem;
 }
 
 .nav-right ul {
@@ -65,17 +87,35 @@ nav {
 }
 
 .nav-right ul li a {
-    color: #fff;
+    color: var(--button-text);
     text-decoration: none;
     transition: color 0.3s;
 }
 
+body.dark-mode .nav-right ul li a {
+    color: #fff; /* Ensure text remains white in dark mode */
+}
+
 .nav-right ul li a:hover {
-    color: #ff6347; /* Change to your preferred hover color */
+    color: var(--secondary-color);
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--button-hover-background);
 }
 
 main {
-    padding: 6rem 2rem 2rem 2rem; /* Adjusted padding to account for fixed header */
+    padding: 6rem 2rem 4rem 2rem; /* Adjusted padding to account for fixed header and add space at the bottom */
 }
 
 section {
@@ -83,59 +123,49 @@ section {
 }
 
 #hero {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Change to your preferred gradient */
-    color: #fff;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--button-text);
     text-align: center;
     padding: 4rem 2rem;
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 2rem; /* Add space below the section */
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    color: #fff; /* Ensure text remains white */
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+body.dark-mode .hero-content {
+    color: #fff; /* Ensure text remains white in dark mode */
 }
 
-.hero-content h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.hero-content .button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.hero-content .button:hover {
-    background-color: #555;
+#about {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 2rem; /* Add space below the section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 2rem;
 }
 
 .photo-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 250px;
     background-color: #ddd;
     margin-right: 1rem;
-    border-radius: 50%;
+    border-radius: 15px;
     overflow: hidden;
+    border: 5px solid var(--text-color);
 }
 
 .photo-placeholder img {
@@ -146,6 +176,9 @@ section {
 
 .about-text {
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about-text p {
@@ -156,36 +189,43 @@ section {
 .about-text .button {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--button-background);
+    color: var(--button-text);
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s;
+    align-self: center;
+    margin-top: auto;
 }
 
 .about-text .button:hover {
-    background-color: #555;
+    background-color: var(--button-hover-background);
 }
 
 #tiles {
     display: flex;
     justify-content: space-around;
+    padding: 4rem 2rem;
+    background: var(--background-color);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tile {
-    background-color: #fff;
+    background: var(--background-color);
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 15px; /* Rounded corners */
     width: 45%;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tile:hover {
     transform: scale(1.05);
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--button-text);
 }
 
 .tile a {
@@ -193,55 +233,19 @@ section {
     color: inherit;
 }
 
-.project-tile {
-    background-color: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: center;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-}
-
-.project-tile:hover {
-    transform: scale(1.05);
-    background-color: #333;
-    color: #fff;
-}
-
-.project-tile a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.fancy-element {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.fancy-element .button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.fancy-element .button:hover {
-    background-color: #555;
-}
-
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--button-text);
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced padding to make the footer thinner */
     position: fixed;
     width: 100%;
     bottom: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode footer {
+    color: #fff; /* Ensure text remains white in dark mode */
 }
 
 form {
@@ -258,15 +262,18 @@ form label {
 form input, form textarea {
     padding: 0.5rem;
     margin-top: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--input-text);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 form button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--button-background);
+    color: var(--button-text);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -274,7 +281,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: var(--button-hover-background);
 }
 
 .code-example {
@@ -298,4 +305,40 @@ form button:hover {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
+}
+
+.project-tiles {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.project-tile {
+    background: var(--background-color);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Rounded corners */
+    margin-right: 1rem;
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+    background: var(--secondary-color);
+    color: var(--button-text);
+}
+
+.project-tile h3 {
+    margin-top: 0;
+}
+
+.project-tile p {
+    margin-bottom: 1rem;
+}
+
+.project-tile .button {
+    margin-top: 1rem;
 }
