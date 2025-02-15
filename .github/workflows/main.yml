@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - main  # Change this if you use a different branch
+      - main  # Adjust if using a different branch
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          region: eu-west-2  # e.g., us-east-1
+          region: eu-west-2  # Adjust based on your AWS region
 
       - name: Deploy to S3
-        run: aws s3 sync . s3://clever-technical-writing.com --delete
+        run: aws s3 sync portfolio-website/src/ s3://clever-technical-writing.com --delete
