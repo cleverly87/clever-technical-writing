@@ -560,3 +560,71 @@ form button:hover {
         width: 100%;
     }
 }
+/* Add these styles to your existing main.css file */
+
+.github-access {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.github-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#github-access-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#github-access-form label {
+    margin-top: 1rem;
+}
+
+#github-access-form input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--input-text);
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#github-access-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#github-access-form button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.disclaimer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.scrollable-text {
+    max-height: 4.5rem; /* Set a maximum height for the description text */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    transition: max-height 0.3s ease-in-out;
+}
+
+.project-tile:hover .scrollable-text {
+    max-height: none; /* Remove the maximum height on hover */
+    overflow: auto; /* Allow scrolling on hover */
+}

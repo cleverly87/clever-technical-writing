@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request GitHub Access</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script>
+        // Function to get query parameter value by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set the repo name in the hidden input field on page load
+        window.onload = function() {
+            const repoName = getQueryParam('repo');
+            if (repoName) {
+                document.getElementById('repo-name').value = repoName;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <h1>Request GitHub Access</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="button">Dark Mode</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="github-access">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="github-logo">
+                <h2>Request Access to My GitHub Repositories</h2>
+                <p>My GitHub repositories are private. If you would like to request access, please fill out the form below.</p>
+                <form id="github-access-form" action="https://formspree.io/f/xrbejqbl" method="POST" onsubmit="return validateForm()">
+                    <input type="hidden" id="repo-name" name="repo-name" value="">
+                    
+                    <label for="requestor-name">Requestor Name:</label>
+                    <input type="text" id="requestor-name" name="requestor-name" placeholder="Requestor Name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address">
+                    
+                    <label for="github-username">GitHub Username:</label>
+                    <input type="text" id="github-username" name="github-username" placeholder="GitHub Username">
+                    
+                    <button type="submit" class="button">Send Request</button>
+                </form>
+                <p class="disclaimer">
+                    Disclaimer: Only read-only access will be given and will be available for 48 hours. None of your details will be stored anywhere.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Andrew Cleverly. All rights reserved.</p>
+    </footer>
+    <script src="scripts/theme-toggle.js"></script>
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const githubUsername = document.getElementById('github-username').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!email && !githubUsername) {
+                alert('Please provide either an email address or a GitHub username.');
+                return false;
+            }
+
+            if (email && !emailPattern.test(email)) {
+                alert('Please provide a valid email address.');
+                return false;
+            }
+
+            return true;
+        }
+
+        // Function to set the repo name in the hidden input field
+        function setRepoName(repoName) {
+            document.getElementById('repo-name').value = repoName;
+        }
+    </script>
+</body>
+</html>
