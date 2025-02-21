@@ -253,6 +253,7 @@ body.dark-mode .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid var(--secondary-color); /* Add border for contrast */
 }
 
 .project-tile p {
@@ -365,6 +366,7 @@ form button:hover {
     text-align: center;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--secondary-color); /* Add border for contrast */
 }
 
 .project-tile:hover {
@@ -375,10 +377,13 @@ form button:hover {
 
 .project-tile h3 {
     margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .project-tile p {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .project-tile .button {
@@ -477,11 +482,13 @@ form button:hover {
 
 .tools-content {
     background: var(--background-color);
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-color); /* Add border for contrast */
     border-radius: 5px;
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    max-width: 100%;
+    color: var(--text-color);
 }
 
 .tools-list {
@@ -560,6 +567,7 @@ form button:hover {
         width: 100%;
     }
 }
+
 /* Add these styles to your existing main.css file */
 
 .github-access {
@@ -627,4 +635,75 @@ form button:hover {
 .project-tile:hover .scrollable-text {
     max-height: none; /* Remove the maximum height on hover */
     overflow: auto; /* Allow scrolling on hover */
+}
+
+.coming-soon-content {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid var(--secondary-color); /* Add border for contrast */
+}
+
+.coming-soon-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.demo-request-block {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid var(--secondary-color); /* Add border for contrast */
+}
+
+#demo-request-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#demo-request-form label {
+    margin-bottom: 0.5rem;
+}
+
+#demo-request-form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--input-text);
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#demo-request-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#demo-request-form button:hover {
+    background-color: var(--button-hover-background);
 }
