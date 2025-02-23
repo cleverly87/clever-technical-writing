@@ -86,6 +86,7 @@ body.dark-mode .nav-left h1 {
 
 .nav-right ul li {
     margin: 0 1rem;
+    font-size: 1.5rem;
 }
 
 .nav-right ul li a {
@@ -96,10 +97,16 @@ body.dark-mode .nav-left h1 {
 
 body.dark-mode .nav-right ul li a {
     color: #fff; /* Ensure text remains white in dark mode */
+    
 }
 
 .nav-right ul li a:hover {
     color: var(--secondary-color);
+}
+
+.nav-right .button {
+    font-size: 1.5rem; /* Match the navigation font size */
+    padding: 0.5rem 1rem;
 }
 
 .button {
@@ -138,10 +145,33 @@ section {
     max-width: 800px;
     margin: 0 auto;
     color: #fff; /* Ensure text remains white */
+    text-align: center;
+    padding: 2rem;
 }
 
 body.dark-mode .hero-content {
     color: #fff; /* Ensure text remains white in dark mode */
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 1.2rem;
 }
 
 #about {
@@ -498,14 +528,6 @@ form button:hover {
     margin-top: 1rem;
 }
 
-.tool {
-    background: var(--primary-color);
-    color: var(--button-text);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    text-align: center;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -547,6 +569,10 @@ form button:hover {
     .code-example pre, .rendered-example {
         width: 100%;
     }
+
+    .nav-right .button {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -565,6 +591,10 @@ form button:hover {
 
     .project-tile {
         width: 100%;
+    }
+
+    .nav-right .button {
+        font-size: 1rem;
     }
 }
 
@@ -706,4 +736,232 @@ form button:hover {
 
 #demo-request-form button:hover {
     background-color: var(--button-hover-background);
+}
+
+/* Add these styles to your existing main.css file */
+
+.about-section {
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Widen the section */
+    margin: 2rem auto;
+    border: 1px solid var(--secondary-color);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    max-width: 300px; /* Control the container width */
+    margin: 0 auto;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: var(--primary-color);
+    color: var(--button-text);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.skills-list li strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+
+
+.skills-list ul {
+    background: none;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.skills-list ul li {
+    background: none;
+    color: var (--text-color);
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.about-profile-image {
+    width: 300px; /* Increased width */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-color);
+    margin: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-profile-image {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-profile-image {
+        width: 300px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-image .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Section Headers */
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Subsection Headers */
+.about-section h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Paragraphs */
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Lists */
+.about-section ul {
+    margin-bottom: 1.2rem;
+}
+
+.about-section ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+/* Nested Lists */
+.about-section ul ul {
+    margin-top: 0.8rem;
+    margin-left: 1.5rem;
+}
+
+/* Strong text in lists */
+.about-section ul li strong {
+    color: var(--primary-color);
+}
+
+/* Common text styles */
+.about-section {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Section Headers */
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Subsection Headers */
+.about-section h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Skills List styling */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.skills-list li {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    background: none;
+}
+
+.skills-list li strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+/* Tool items styling */
+.tool {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: var(--button-text);
+    background: var(--primary-color);
+}
+
+
+
+.about-section.inverted .achievements-list > li {
+    background: var(--text-color);
+    color: var(--background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--background-color);
+}
+
+.about-section.inverted .achievements-list li strong {
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.about-section.inverted .achievements-list ul li {
+    color: var(--background-color);
+    background: none;
 }
