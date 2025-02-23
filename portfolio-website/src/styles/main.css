@@ -86,7 +86,7 @@ body.dark-mode .nav-left h1 {
 
 .nav-right ul li {
     margin: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .nav-right ul li a {
@@ -105,7 +105,7 @@ body.dark-mode .nav-right ul li a {
 }
 
 .nav-right .button {
-    font-size: 1.5rem; /* Match the navigation font size */
+    font-size: 1rem; /* Match the navigation font size */
     padding: 0.5rem 1rem;
 }
 
@@ -571,13 +571,13 @@ form button:hover {
     }
 
     .nav-right .button {
-        font-size: 1.25rem;
+        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .button {
