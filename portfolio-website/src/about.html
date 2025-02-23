@@ -15,6 +15,7 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -23,40 +24,99 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>About Me</h1>
+        <h1 class="page-title">About Me</h1>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who I Am</h2>
+                    <h3>Professional Background</h3>
+                    <p>Before transitioning into technical writing, I served as a Senior Scientist for an international oil producer. In this role, I managed all aspects of planning, project management, operations, and application. Additionally, I engaged in private biosensor research and development, where I communicated complex technical information to investors and stakeholders, tailoring content for both technical and non-technical audiences.</p>
 
-            <h2>Who I Am</h2>
-            <p>I am a <strong>Senior Technical Writer</strong> specializing in <strong>API documentation</strong>, <strong>developer enablement</strong>, and <strong>technical content strategy</strong>. Since 2022, I have been the <strong>sole technical writer at Creditsafe</strong>, managing documentation across multiple global products.</p>
+                    <h3>Where I am now</h3>
+                    <p>I am a Senior Technical Writer specializing in API documentation, developer enablement, and technical content strategy. Since 2022, I have been the sole technical writer at Creditsafe, leading the transformation of our API documentation to enhance customer experience and streamline developer integration.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="Andrew Cleverly" class="about-profile-image">
+                </div>
+            </div>
+        </section>
 
+        <section class="about-section">
             <h2>Skills & Tools</h2>
-            <ul>
-                <li><strong>Languages:</strong> Python, HTML, CSS, JavaScript, Markdown</li>
-                <li><strong>Tools:</strong> Azure DevOps (ADO), AWS API Gateway, Postman, Realm Platform Integration, VS Code, Git, CI/CD</li>
-                <li><strong>Technologies:</strong> YAML, JSON</li>
-                <li><strong>AI Integration:</strong> Using AI tools to enhance documentation and workflows</li>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong>
+                    <span class="tool">Python</span>
+                    <span class="tool">HTML</span>
+                    <span class="tool">CSS</span>
+                    <span class="tool">JavaScript</span>
+                    <span class="tool">Markdown</span>
+                    <span class="tool">YAML</span>
+                    <span class="tool">JSON</span>
+                </li>
+                <li><strong>Tools:</strong>
+                    <span class="tool">Azure DevOps (ADO)</span>
+                    <span class="tool">AWS API Gateway</span>
+                    <span class="tool">Postman</span>
+                    <span class="tool">Realm Platform Integration</span>
+                    <span class="tool">VS Code</span>
+                    <span class="tool">Git</span>
+                    <span class="tool">CI/CD</span>
+                </li>
+                
+                <li><strong>AI Integration:</strong> Leveraging AI tools to enhance documentation and workflows</li>
             </ul>
+        </section>
 
-            <h2>What I Do at Creditsafe</h2>
-            <p>Creditsafe is a leading global provider of <strong>business credit risk</strong> and <strong>compliance solutions</strong>, with a database covering <strong>430M+ businesses</strong> across <strong>200+ countries</strong>.</p>
+        <section class="about-section inverted">
+            <h2>My Journey at Creditsafe</h2>
+            <p>Creditsafe is a leading global provider of business credit risk and compliance solutions, with a database covering over 430 million businesses across more than 200 countries.</p>
 
-            <h3>🔹 Transforming API Documentation</h3>
-            <ul>
-                <li>Developed a <strong>comprehensive, self-service API documentation platform</strong>.</li>
-                <li>Created <strong>interactive mock servers</strong> and <strong>multi-language code examples</strong> to help developers integrate faster.</li>
+            <p>Upon joining Creditsafe, I encountered minimal and unmanaged API documentation. Recognizing the critical need for comprehensive, user-centric documentation, I took full ownership of the project. My approach is rooted in a customer-first philosophy: understanding client needs, assessing current development stages, and bridging the gap with clear, actionable knowledge.</p>
+
+            <h3>Key Achievements:</h3>
+            <ul class="achievements-list">
+                <li><strong>Comprehensive Documentation Overhaul:</strong><br><br> 
+                    Independently audited and tested every API endpoint from a customer's perspective. Collaborated with product owners and development teams to ensure accuracy and relevance, creating all missing documentation single-handedly.</li>
+                <li><strong>Customer-Centric API Portal:</strong><br><br>
+                    Designed and developed a new API documentation portal that segments the API into individual products. Features include:
+                    <ul>
+                        <li>Interactive in-browser testing</li>
+                        <li>Downloadable OpenAPI specifications</li>
+                        <li>Multi-language code examples</li>
+                        <li>Process flows</li>
+                        <li>Product Specific Guides</li>
+                        <li>Integrated feedback mechanisms to identify and address customer pain points</li>
+                    </ul>
+                    This initiative has significantly reduced customer inquiries, empowering users to integrate seamlessly without additional support.
+                </li>
+                <li><strong>Doc-as-Code Implementation:</strong><br><br>
+                    Transitioned documentation to a Doc-as-Code approach, integrating it into the CI/CD pipeline. This ensures real-time updates and maintains alignment with ongoing software developments.</li>
+                <li><strong>Internal Knowledge Empowerment:</strong><br><br>
+                    Established a self-service API catalog for internal teams, standardizing documentation processes and reducing dependencies on direct developer interactions.</li>
             </ul>
+        </section>
 
-            <h3>🔹 Internal Knowledge Base</h3>
-            <ul>
-                <li>Built a <strong>fully self-serve API catalog</strong> for internal teams.</li>
-                <li>Standardized API documentation processes to reduce dependency on direct developer interactions.</li>
-            </ul>
+        <section class="about-section">
+            <h2>Strategic Leadership</h2>
+            <p>In my role, I engage with executive leadership to align documentation initiatives with Creditsafe's overarching business objectives. By collaborating closely with cross-functional teams, I ensure that our documentation strategy supports product development and enhances customer satisfaction. This alignment has positioned our documentation as a strategic asset, driving product adoption and contributing to business growth.</p>
+        </section>
 
+        <section class="about-section">
             <h2>Approach & Philosophy</h2>
-            <p>Technical documentation should be <strong>clear, actionable, and accessible</strong>. I take a <strong>developer-first approach</strong>, ensuring documentation is tested, structured, and continuously improved. My expertise in <strong>Doc-as-Code</strong>, version control, and agile development processes ensures documentation stays aligned with evolving software.</p>
+            <p>I believe that exceptional documentation is the cornerstone of a positive user experience. By immersing myself in the user journey, I ensure that our documentation is not only informative but also intuitive and accessible. My goal is to make our API offerings fully self-service, minimizing the need for external support.</p>
+        </section>
 
+        <section class="about-section">
             <h2>Future Goals</h2>
-            <p>I'm looking to expand my expertise in <strong>developer experience (DX)</strong>, <strong>AI-driven documentation</strong>, and <strong>API usability research</strong>. I thrive in environments where I can <strong>bridge the gap</strong> between complex technologies and practical implementation.</p>
+            <p>I am committed to continuous improvement and innovation. My future objectives include:</p>
+            <ul>
+                <li>Enhancing developer experience (DX)</li>
+                <li>Integrating AI-driven solutions into documentation practices</li>
+                <li>Conducting API usability research to further refine our offerings</li>
+            </ul>
+            <p>I thrive on bridging the gap between complex technical concepts and user-friendly content, ensuring that our documentation serves as a powerful tool for both customers and developers.</p>
+
+            <p>For a closer look at the API documentation portal and its features, please visit: <a href="./projects/creditsafe-project.html" target="_blank">Creditsafe API Documentation</a></p>
 
             <hr>
             <br>
