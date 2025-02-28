@@ -6,3 +6,8 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         this.textContent = 'Dark Mode';
     }
 });
+
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+    const navList = document.querySelector('.nav-right ul');
+    navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
+});
