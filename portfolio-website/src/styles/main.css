@@ -845,7 +845,7 @@ form button:hover {
     border: 1px solid var(--input-border);
     border-radius: 4px;
     background-color: var(--input-background);
-    color: var(--input-text);
+    color: var (--input-text);
     width: 100%;
     max-width: 300px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -1051,7 +1051,7 @@ form button:hover {
 
 .skills-list li {
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: var (--text-color);
     background: none;
 }
 
@@ -1091,4 +1091,161 @@ form button:hover {
 .about-section.inverted .achievements-list ul li {
     color: var(--background-color);
     background: none;
+}
+
+.project-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-section > div {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--secondary-color);
+}
+
+.project-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tech-stack, .infrastructure ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tech-stack li, .infrastructure li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tech-stack li:before, .infrastructure li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.github-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+    .project-section {
+        padding: 1rem;
+    }
+    
+    .project-section > div {
+        padding: 1rem;
+    }
+}
+
+.project-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--button-text);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+}
+
+.project-title-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.project-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--button-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--button-text);
+    opacity: 0.9;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.github-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.github-logo {
+    width: 32px;
+    height: 32px;
+    filter: none; /* Remove the brightness/invert filter */
+}
+
+@media (max-width: 768px) {
+    .project-header {
+        padding: 2rem 1rem;
+    }
+
+    .project-header h2 {
+        font-size: 2rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .project-section {
+        padding: 0 1rem;
+    }
+    
+    .github-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .github-logo {
+        width: 28px;
+        height: 28px;
+    }
 }
