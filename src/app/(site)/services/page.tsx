@@ -5,9 +5,9 @@ export const metadata = { title: "Services — Andrew Cleverly" };
 
 export default function ServicesPage() {
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
       <Header />
-      <section className="container py-12">
+      <section className="container py-12 flex-grow">
         <h1 className="text-3xl font-semibold">Services</h1>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="border border-neutral-800 rounded p-5">

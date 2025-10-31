@@ -15,9 +15,9 @@ function Card({ title, children, href }: { title: string; children: React.ReactN
 
 export default function ProjectsPage() {
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
       <Header />
-      <section className="container py-12">
+      <section className="container py-12 flex-grow">
         <h1 className="text-3xl font-semibold">Projects</h1>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <Card title="Creditsafe API Developer Portal (Realm)" href="https://doc.creditsafe.com/">

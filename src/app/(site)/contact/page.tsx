@@ -1,12 +1,15 @@
 "use client";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useState } from "react";
-
-export const metadata = { title: "Contact — Andrew Cleverly" };
+import { useState, useEffect } from "react";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<null | string>(null);
+
+  // Set page title on client side
+  useEffect(() => {
+    document.title = "Contact — Andrew Cleverly";
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,9 +34,9 @@ export default function ContactPage() {
   }
 
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
       <Header />
-      <section className="container py-12">
+      <section className="container py-12 flex-grow">
         <h1 className="text-3xl font-semibold">Contact</h1>
         <form onSubmit={onSubmit} className="mt-6 max-w-xl space-y-4">
           <input name="name" placeholder="Your name" className="w-full bg-neutral-900 border border-neutral-800 rounded px-3 py-2" required />
