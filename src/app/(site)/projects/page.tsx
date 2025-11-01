@@ -36,6 +36,10 @@ export default function ProjectsPage() {
       <section className="container py-12 flex-grow">
         <h1 className="text-3xl font-semibold">Projects</h1>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
+          <Card title="Portfolio Platform Architecture" href="/projects/portfolio">
+            Professional consultancy platform built with Next.js 14, TypeScript, and AWS infrastructure. 
+            Demonstrates modern web development, CI/CD automation, and enterprise deployment practices.
+          </Card>
           <Card title="Creditsafe API Developer Portal (Realm)" href="/projects/creditsafe">
             Global multi-product API documentation portal. Modular OpenAPI 3.1 architecture, governance, and CI/CD
             publishing pipeline. Role: architect, implementer, and content lead.
