@@ -33,6 +33,7 @@ export default function Header() {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/insights">Insights</Link>
           <Link href="/services">Services</Link>
           <Link href="/contact">Contact</Link>
         </nav>
@@ -48,6 +49,10 @@ export default function Header() {
           <div className="container py-3 flex flex-col gap-3">
             <Link href="/" onClick={() => setOpen(false)}>Home</Link>
             <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
+            <Link href="/insights" onClick={() => setOpen(false)}>Insights</Link>
+            <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
+            <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
             <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
             <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
             <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
