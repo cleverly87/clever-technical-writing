@@ -20,11 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js
+      - name: Build and Export Next.js
         run: npm run build
-
-      - name: Export static site
-        run: npm run export
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
