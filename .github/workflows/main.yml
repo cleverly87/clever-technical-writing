@@ -21,9 +21,10 @@ jobs:
 
       - name: Deploy to S3 with correct MIME types
         run: |
-          aws s3 sync portfolio-website/src/ s3://clever-technical-writing.com --delete
-          aws s3 cp s3://clever-technical-writing.com s3://clever-technical-writing.com --recursive --exclude "*" --include "*.js" --content-type "application/javascript"
-          aws s3 cp s3://clever-technical-writing.com s3://clever-technical-writing.com --recursive --exclude "*" --include "*.css" --content-type "text/css"
+          aws s3 sync src/ s3://clever-technical-writing.com --delete --exclude "*.css" --exclude "*.js" --exclude "*.html"
+          aws s3 sync src/ s3://clever-technical-writing.com --exclude "*" --include "*.css" --content-type "text/css"
+          aws s3 sync src/ s3://clever-technical-writing.com --exclude "*" --include "*.js" --content-type "application/javascript"
+          aws s3 sync src/ s3://clever-technical-writing.com --exclude "*" --include "*.html" --content-type "text/html"
 
       - name: Invalidate CloudFront Cache
         run: |

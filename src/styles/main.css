@@ -1,0 +1,110 @@
+﻿/* Construction Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #e2e8f0;
+}
+
+.construction-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.construction-content {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 
+        0 10px 15px rgba(0,0,0,0.3),
+        0 0 30px rgba(96, 165, 250, 0.15),
+        0 0 60px rgba(96, 165, 250, 0.08);
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+.construction-header h1 {
+    font-size: 2.5rem;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+}
+
+.construction-header h2 {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.construction-icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.construction-message h3 {
+    font-size: 1.875rem;
+    color: #f1f5f9;
+    margin: 1rem 0;
+}
+
+.construction-details {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid #60a5fa;
+    text-align: left;
+}
+
+.construction-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.construction-details li {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.construction-details li:last-child {
+    margin-bottom: 0;
+}
+
+.construction-timeline {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.contact-link {
+    padding: 0.75rem 1.5rem;
+    background: #0f172a;
+    color: #60a5fa;
+    text-decoration: none;
+    border: 2px solid #60a5fa;
+    border-radius: 8px;
+}
+
+.contact-link:hover {
+    background: #60a5fa;
+    color: #0f172a;
+}
