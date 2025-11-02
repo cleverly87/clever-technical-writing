@@ -1,8 +1,8 @@
-name: Deploy to AWS S3 + CloudFront
+name: Deploy Next.js to AWS S3 + CloudFront
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, tailwind ]  # Include your working branch
 
 jobs:
   build-and-deploy:
@@ -11,20 +11,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Install
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build Next.js
         run: npm run build
 
-      # If you prefer static export, add: next export (and upload 'out/')
-      # - name: Export static
-      #   run: npx next export
+      - name: Export static site
+        run: npm run export
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -35,13 +35,14 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync .next/static s3://${{ secrets.AWS_S3_BUCKET }}/_next/static --delete
-          aws s3 cp .next/standalone/server.js s3://${{ secrets.AWS_S3_BUCKET }}/server.js || true
-          aws s3 sync public s3://${{ secrets.AWS_S3_BUCKET }}/ --delete
-          # For static export, replace with: aws s3 sync out s3://${{ secrets.AWS_S3_BUCKET }} --delete
+          aws s3 sync out s3://${{ secrets.AWS_S3_BUCKET }} --delete
+          
+      - name: Set correct MIME types
+        run: |
+          aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }} s3://${{ secrets.AWS_S3_BUCKET }} --recursive --exclude "*" --include "*.js" --content-type "application/javascript"
+          aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }} s3://${{ secrets.AWS_S3_BUCKET }} --recursive --exclude "*" --include "*.css" --content-type "text/css"
+          aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }} s3://${{ secrets.AWS_S3_BUCKET }} --recursive --exclude "*" --include "*.html" --content-type "text/html"
 
-      - name: Invalidate CloudFront
-        uses: awact/cloudfront-action@v1.0.3
-        with:
-          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          invalidation-path: "/*"
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
