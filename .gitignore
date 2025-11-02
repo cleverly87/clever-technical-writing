@@ -1,3 +1,22 @@
 node_modules/
 .next/
+out/
 .github/copilot-instructions.md
+
+# Build outputs
+dist/
+build/
+
+# Environment files  
+.env
+.env.local
+.env.production
+.env.staging
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
