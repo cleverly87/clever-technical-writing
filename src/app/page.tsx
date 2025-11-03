@@ -80,6 +80,41 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Strategic Documentation Thinking Section */}
+        <div className="py-16 px-6 border-b border-neutral-800">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-semibold text-neutral-100 text-center mb-3">
+              Strategic Documentation Thinking
+            </h2>
+            <p className="text-neutral-400 text-center mb-12 text-sm">
+              Documentation as business architecture, not just content delivery
+            </p>
+            
+            <div className="mb-8">
+              <p className="text-neutral-300 text-center leading-relaxed">
+                I approach documentation not just as content, but as a critical system within the business architecture. 
+                It should evolve with the product lifecycle, reflect governance needs, and enable scalable developer 
+                onboarding, support, and automation.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
+                <h3 className="font-semibold text-neutral-200 mb-2">Product Strategy Alignment</h3>
+                <p className="text-sm text-neutral-400">Aligns with product and platform strategy</p>
+              </div>
+              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
+                <h3 className="font-semibold text-neutral-200 mb-2">Governance & Analytics</h3>
+                <p className="text-sm text-neutral-400">Enables governance, analytics, and automation</p>
+              </div>
+              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
+                <h3 className="font-semibold text-neutral-200 mb-2">DevOps Integration</h3>
+                <p className="text-sm text-neutral-400">Integrates seamlessly into CI/CD and DevOps workflows</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Built with Systems Thinking Section */}
         <div className="py-16 px-6 border-b border-neutral-800">
           <div className="max-w-4xl mx-auto">
