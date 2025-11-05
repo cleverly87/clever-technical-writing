@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = { title: "About — Andrew Cleverly" };
 
@@ -18,16 +19,15 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-3 gap-12 items-start">
               {/* Professional Image */}
               <div className="lg:col-span-1">
-                <div className="aspect-square bg-neutral-800 rounded-lg border border-neutral-700 flex items-center justify-center mb-6">
-                  <div className="text-center text-neutral-400">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-neutral-700 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                      </svg>
-                    </div>
-                    <p className="text-sm">Professional Photo</p>
-                    <p className="text-xs text-neutral-500 mt-1">Placeholder</p>
-                  </div>
+                <div className="aspect-square bg-neutral-800 rounded-lg border border-neutral-700 overflow-hidden mb-6">
+                  <Image
+                    src="/images/Profile_image.jpeg"
+                    alt="Andrew Cleverly - API Technical Writer and Documentation Systems Architect"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
                 
                 {/* Profile Links */}
