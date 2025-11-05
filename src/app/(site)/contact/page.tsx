@@ -189,7 +189,7 @@ export default function ContactPage() {
 
               <div className="text-center">
                 <p className="text-sm text-neutral-400 mb-4">
-                  Based in Swansea, UK • Working with clients globally
+                  Based in Carmarthenshire, UK • Working with clients globally
                 </p>
                 <Link 
                   href="/insights"
