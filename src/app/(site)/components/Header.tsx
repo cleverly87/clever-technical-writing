@@ -1,27 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-
-function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [dark, setDark] = useState(true);
-  useEffect(() => setMounted(true), []);
-  useEffect(() => {
-    if (!mounted) return;
-    document.documentElement.classList.toggle("dark", dark);
-    localStorage.setItem("theme", dark ? "dark" : "light");
-  }, [mounted, dark]);
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved) setDark(saved === "dark");
-  }, []);
-  if (!mounted) return null;
-  return (
-    <button className="rounded border px-3 py-1 text-sm" onClick={() => setDark(d => !d)}>
-      {dark ? "Light" : "Dark"} mode
-    </button>
-  );
-}
+import { useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -38,7 +17,6 @@ export default function Header() {
           <Link href="/contact">Contact</Link>
         </nav>
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <button className="md:hidden border rounded px-2 py-1 text-sm" onClick={() => setOpen(o => !o)}>
             Menu
           </button>
