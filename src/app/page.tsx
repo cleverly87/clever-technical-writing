@@ -47,12 +47,21 @@ export default function HomePage() {
       <Header />
       <div className="flex-grow">
         {/* Hero Section */}
-        <div className="bg-neutral-950 py-24 px-6">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 py-24 px-6 relative overflow-hidden">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          </div>
+          
+          <div className="max-w-5xl mx-auto text-center relative z-10">
             <h1 className="text-5xl font-bold text-neutral-100 mb-8">
-              <span className="text-neutral-200">Documentation is Infrastructure</span>
+              <span className="bg-gradient-to-r from-neutral-100 to-neutral-300 bg-clip-text text-transparent">
+                Documentation is Infrastructure
+              </span>
             </h1>
-            <p className="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed">
               I design and build API documentation ecosystems that connect engineering, product, and business —
               unifying OpenAPI governance, CI/CD DocOps, and SDK generation to empower customers from day one.
               Every implementation aligns documentation delivery with strategic goals and AI-enabled knowledge flows.
@@ -60,19 +69,24 @@ export default function HomePage() {
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 justify-center max-w-md sm:max-w-none mx-auto">
               <Link 
                 href="/projects" 
-                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap text-center"
+                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-neutral-800/50 whitespace-nowrap text-center group"
               >
-                View Projects
+                <span className="flex items-center justify-center gap-2">
+                  View Projects
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </Link>
               <Link 
                 href="/services" 
-                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap text-center"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/50 whitespace-nowrap text-center"
               >
                 Services
               </Link>
               <Link 
                 href="/contact" 
-                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap text-center"
+                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-neutral-800/50 whitespace-nowrap text-center"
               >
                 Contact
               </Link>
@@ -81,80 +95,147 @@ export default function HomePage() {
         </div>
 
         {/* Strategic Documentation Thinking Section */}
-        <div className="py-16 px-6 border-b border-neutral-800">
+        <div className="py-20 px-6 border-b border-neutral-800 bg-gradient-to-r from-neutral-900 to-neutral-950">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-semibold text-neutral-100 text-center mb-3">
-              Strategic Documentation Thinking
-            </h2>
-            <p className="text-neutral-400 text-center mb-12 text-sm">
-              Documentation as business architecture, not just content delivery
-            </p>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-neutral-100 mb-4">
+                Strategic Documentation Thinking
+              </h2>
+              <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+                Documentation as business architecture, not just content delivery
+              </p>
+            </div>
             
-            <div className="mb-8">
-              <p className="text-neutral-300 text-center leading-relaxed">
+            <div className="mb-12">
+              <p className="text-neutral-300 text-center leading-relaxed text-lg max-w-3xl mx-auto">
                 I approach documentation not just as content, but as a critical system within the business architecture. 
                 It should evolve with the product lifecycle, reflect governance needs, and enable scalable developer 
                 onboarding, support, and automation.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">Product Strategy Alignment</h3>
-                <p className="text-sm text-neutral-400">Aligns with product and platform strategy</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20 bg-neutral-900/50 backdrop-blur-sm">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-neutral-200 mb-3 text-lg">Product Strategy Alignment</h3>
+                <p className="text-neutral-400">Aligns with product and platform strategy</p>
               </div>
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">Governance & Analytics</h3>
-                <p className="text-sm text-neutral-400">Enables governance, analytics, and automation</p>
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-green-900/20 bg-neutral-900/50 backdrop-blur-sm">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-neutral-200 mb-3 text-lg">Governance & Analytics</h3>
+                <p className="text-neutral-400">Enables governance, analytics, and automation</p>
               </div>
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">DevOps Integration</h3>
-                <p className="text-sm text-neutral-400">Integrates seamlessly into CI/CD and DevOps workflows</p>
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20 bg-neutral-900/50 backdrop-blur-sm">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-neutral-200 mb-3 text-lg">DevOps Integration</h3>
+                <p className="text-neutral-400">Integrates seamlessly into CI/CD and DevOps workflows</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Built with Systems Thinking Section */}
-        <div className="py-16 px-6 border-b border-neutral-800">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-semibold text-neutral-100 text-center mb-3">
-              Built with Systems Thinking
-            </h2>
-            <p className="text-neutral-400 text-center mb-12 text-sm">
-              Complex documentation ecosystems designed for scale and integration
-            </p>
+        <div className="py-20 px-6 border-b border-neutral-800">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-neutral-100 mb-4">
+                Built with Systems Thinking
+              </h2>
+              <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+                Complex documentation ecosystems designed for scale and integration
+              </p>
+            </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">Creditsafe API Platform</h3>
-                <p className="text-sm text-neutral-400 mb-3">Multi-product OpenAPI governance with automated SDK generation and developer portal integration</p>
-                <Link href="/projects/creditsafe" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
-                  View Case Study →
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20 group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-200 mb-2 text-lg">Creditsafe API Platform</h3>
+                    <p className="text-neutral-400 mb-4 leading-relaxed">Multi-product OpenAPI governance with automated SDK generation and developer portal integration</p>
+                  </div>
+                </div>
+                <Link href="/projects/creditsafe" className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View Case Study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
               
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">Stoplight Demo System</h3>
-                <p className="text-sm text-neutral-400 mb-3">Advanced API design toolchain with collaborative workflows and enterprise governance demonstration</p>
-                <Link href="/projects/stoplight-demo" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
-                  View Case Study →
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-green-900/20 group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-200 mb-2 text-lg">Stoplight Demo System</h3>
+                    <p className="text-neutral-400 mb-4 leading-relaxed">Advanced API design toolchain with collaborative workflows and enterprise governance demonstration</p>
+                  </div>
+                </div>
+                <Link href="/projects/stoplight-demo" className="text-green-400 hover:text-green-300 transition-colors text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View Case Study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
               
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">OANDA Trading Bot System</h3>
-                <p className="text-sm text-neutral-400 mb-3">Automated forex trading interface with custom strategy algorithms and signal execution via OANDA API integration</p>
-                <Link href="/projects/oanda" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
-                  View Case Study →
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-orange-900/20 group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-200 mb-2 text-lg">OANDA Trading Bot System</h3>
+                    <p className="text-neutral-400 mb-4 leading-relaxed">Automated forex trading interface with custom strategy algorithms and signal execution via OANDA API integration</p>
+                  </div>
+                </div>
+                <Link href="/projects/oanda" className="text-orange-400 hover:text-orange-300 transition-colors text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View Case Study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
               
-              <div className="border border-neutral-800 rounded-lg p-5 hover:border-neutral-700 transition-colors">
-                <h3 className="font-semibold text-neutral-200 mb-2">Swansea Harriers Analytics Platform</h3>
-                <p className="text-sm text-neutral-400 mb-3">Power of 10 API integration with Python data cleaning modules and SQL database, plus management UI for athlete insights</p>
-                <Link href="/projects/swansea-harriers" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
-                  View Case Study →
+              <div className="border border-neutral-800 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20 group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-200 mb-2 text-lg">Swansea Harriers Analytics Platform</h3>
+                    <p className="text-neutral-400 mb-4 leading-relaxed">Power of 10 API integration with Python data cleaning modules and SQL database, plus management UI for athlete insights</p>
+                  </div>
+                </div>
+                <Link href="/projects/swansea-harriers" className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View Case Study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
             </div>
