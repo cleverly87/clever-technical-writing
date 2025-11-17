@@ -64,7 +64,9 @@ export default function HomePage() {
             <p className="text-xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed">
               I design and build API documentation ecosystems that connect engineering, product, and business —
               unifying OpenAPI governance, CI/CD DocOps, and SDK generation to empower customers from day one.
-              Every implementation aligns documentation delivery with strategic goals and AI-enabled knowledge flows.
+              From enterprise documentation platforms to full-stack demonstration systems, every implementation 
+              emphasizes scalable architecture and comprehensive documentation that serves both human understanding 
+              and AI-agent consumption. Every solution aligns technical delivery with strategic business goals.
             </p>
             <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 justify-center max-w-md sm:max-w-none mx-auto">
               <Link 
