@@ -4,30 +4,7 @@ import Link from "next/link";
 
 export const metadata = { title: "Projects — Andrew Cleverly" };
 
-function Card({ 
-  title, 
-  children, 
-  href, 
-  external = false 
-}: { 
-  title: string; 
-  children: React.ReactNode; 
-  href: string;
-  external?: boolean;
-}) {
-  const content = (
-    <div className="border border-neutral-800 rounded p-5 hover:border-neutral-600 transition">
-      <h3 className="font-semibold">{title}</h3>
-      <div className="text-sm text-neutral-300 mt-2">{children}</div>
-    </div>
-  );
-  
-  return external ? (
-    <a href={href} target="_blank" rel="noreferrer">{content}</a>
-  ) : (
-    <Link href={href}>{content}</Link>
-  );
-}
+
 
 export default function ProjectsPage() {
   return (
@@ -128,19 +105,104 @@ export default function ProjectsPage() {
             <h2 className="text-2xl font-semibold text-neutral-100 mb-8 text-center">Additional Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               
-              <Card title="Pleo Demo Task (Stoplight)" href="/projects/stoplight-demo">
-                Sample API definition and minimal portal using Stoplight tooling. Demonstrates spec writing and public-facing docs.
-              </Card>
-              
-              <Card title="Swansea Harriers Athlete Database" href="/projects/swansea-harriers">
-                Web-based athlete performance DB with Python/Flask API + SQLite, UI for querying PB/SB and trends.
-                OpenAPI-backed docs and maintainable content pipeline.
-              </Card>
-              
-              <Card title="OANDA FX Trading Engine" href="/projects/oanda">
-                Fully operational trading bot with modular strategies, risk management, live monitoring, and logging.
-                Core strategies & credentials protected under IP. Public write-up focuses on architecture and DocOps.
-              </Card>
+              {/* Pleo Demo */}
+              <div className="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-900/20">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">Pleo Demo Task (Stoplight)</h3>
+                    <div className="inline-flex items-center gap-2 bg-emerald-900/30 text-emerald-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                      Live Demo
+                    </div>
+                  </div>
+                </div>
+                <p className="text-neutral-300 mb-4">
+                  Sample API definition and minimal portal using Stoplight tooling. Demonstrates spec writing and public-facing documentation standards.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link 
+                    href="/projects/stoplight-demo" 
+                    className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-2"
+                  >
+                    View Demo
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  <span className="text-xs text-neutral-500">API Design</span>
+                </div>
+              </div>
+
+              {/* Swansea Harriers */}
+              <div className="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-900/20">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">Swansea Harriers Analytics</h3>
+                    <div className="inline-flex items-center gap-2 bg-green-900/30 text-green-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                      Production
+                    </div>
+                  </div>
+                </div>
+                <p className="text-neutral-300 mb-4">
+                  Full-stack athletic performance platform with Python/Flask backend, SQLite database, and intelligent relay team optimization algorithms.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link 
+                    href="/projects/swansea-harriers" 
+                    className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-2"
+                  >
+                    View Project
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  <span className="text-xs text-neutral-500">Full Stack</span>
+                </div>
+              </div>
+
+              {/* OANDA Trading Engine */}
+              <div className="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-all duration-300 hover:shadow-lg hover:shadow-orange-900/20">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">OANDA FX Trading Engine</h3>
+                    <div className="inline-flex items-center gap-2 bg-orange-900/30 text-orange-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                      Development/Stage
+                    </div>
+                  </div>
+                </div>
+                <p className="text-neutral-300 mb-4">
+                  Fully operational trading bot with modular strategies, risk management, live monitoring, and comprehensive logging systems.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link 
+                    href="/projects/oanda" 
+                    className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2"
+                  >
+                    View Architecture
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  <span className="text-xs text-neutral-500">FinTech</span>
+                </div>
+              </div>
 
             </div>
           </section>
