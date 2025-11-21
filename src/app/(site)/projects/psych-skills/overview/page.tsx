@@ -40,32 +40,34 @@ function Breadcrumb() {
  */
 function HeroSection() {
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-emerald-950">
+    <div className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-emerald-950">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       
-      <div className="text-center z-10 px-6 max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto text-center z-10 relative">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
           Professional Psychology Platform
         </h1>
-        <p className="text-xl md:text-2xl text-neutral-300 mb-12">
+        <p className="text-xl md:text-2xl text-neutral-300 mb-8">
           Enterprise-Grade Healthcare SaaS with Advanced Security & Booking Management
         </p>
         
-        {/* Platform Coming Soon Notice */}
-        <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 border border-emerald-400/30 rounded-xl p-8 max-w-3xl mx-auto">
+        <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 border border-emerald-400/30 rounded-xl p-8 text-left">
           <div className="flex items-start gap-4">
-            <div className="text-4xl">🚀</div>
-            <div className="text-left">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">Platform Launching Soon</h3>
+            <div className="text-4xl">🏥</div>
+            <div>
+              <h3 className="text-xl font-semibold text-emerald-400 mb-3">Full-Stack Healthcare Platform</h3>
               <p className="text-neutral-300 mb-4">
-                The Psych-Skills platform is currently in final development and testing phases. 
-                The production site will be available at <a href="https://psych-skills.co.uk" className="text-emerald-400 hover:text-emerald-300 underline" target="_blank" rel="noopener noreferrer">psych-skills.co.uk</a> upon launch.
+                Production-ready SaaS application built with Next.js 14, TypeScript, and PostgreSQL. 
+                Designed for professional sports psychology services with enterprise-grade security, 
+                real-time booking management, and comprehensive administrative controls.
               </p>
-              <p className="text-neutral-400 text-sm">
-                This technical overview showcases the complete architecture, features, and implementation details 
-                of this enterprise-grade healthcare SaaS platform.
-              </p>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <span className="px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full">Next.js 14 App Router</span>
+                <span className="px-3 py-1 bg-cyan-900/30 text-cyan-400 rounded-full">TypeScript</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-400 rounded-full">PostgreSQL + Prisma</span>
+                <span className="px-3 py-1 bg-rose-900/30 text-rose-400 rounded-full">Enterprise Security</span>
+              </div>
             </div>
           </div>
         </div>
