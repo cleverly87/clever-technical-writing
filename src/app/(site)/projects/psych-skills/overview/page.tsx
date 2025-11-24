@@ -40,34 +40,50 @@ function Breadcrumb() {
  */
 function HeroSection() {
   return (
-    <div className="py-20 px-6 relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-emerald-950">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-emerald-950">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       
-      <div className="max-w-4xl mx-auto text-center z-10 relative">
+      <div className="text-center z-10 px-6 max-w-6xl mx-auto">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
           Professional Psychology Platform
         </h1>
-        <p className="text-xl md:text-2xl text-neutral-300 mb-8">
-          Enterprise-Grade Healthcare SaaS with Advanced Security & Booking Management
+        <p className="text-xl md:text-2xl text-neutral-300 mb-12">
+          Complete Technical Deep Dive & Live Application Screenshots
         </p>
         
-        <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 border border-emerald-400/30 rounded-xl p-8 text-left">
-          <div className="flex items-start gap-4">
-            <div className="text-4xl">🏥</div>
-            <div>
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">Full-Stack Healthcare Platform</h3>
-              <p className="text-neutral-300 mb-4">
-                Production-ready SaaS application built with Next.js 14, TypeScript, and PostgreSQL. 
-                Designed for professional sports psychology services with enterprise-grade security, 
-                real-time booking management, and comprehensive administrative controls.
-              </p>
-              <div className="flex flex-wrap gap-3 text-sm">
-                <span className="px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full">Next.js 14 App Router</span>
-                <span className="px-3 py-1 bg-cyan-900/30 text-cyan-400 rounded-full">TypeScript</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-400 rounded-full">PostgreSQL + Prisma</span>
-                <span className="px-3 py-1 bg-rose-900/30 text-rose-400 rounded-full">Enterprise Security</span>
-              </div>
+        {/* Screenshot Showcase */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="bg-gradient-to-br from-neutral-800/30 to-neutral-900/30 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-emerald-400 mb-4">Landing Page Interface</h3>
+            <div className="rounded-lg overflow-hidden border border-neutral-600">
+              <img
+                src="/images/psychSkillsLandingPage.png"
+                alt="Psych-Skills Landing Page"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-neutral-800/30 to-neutral-900/30 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-purple-400 mb-4">Admin Dashboard</h3>
+            <div className="rounded-lg overflow-hidden border border-neutral-600">
+              <img
+                src="/images/psychSkillsAdmin.png"
+                alt="Psych-Skills Admin Dashboard"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-neutral-800/30 to-neutral-900/30 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-rose-400 mb-4">Security Monitoring</h3>
+            <div className="rounded-lg overflow-hidden border border-neutral-600">
+              <img
+                src="/images/psychSkillsSecurity.png"
+                alt="Psych-Skills Security Dashboard"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

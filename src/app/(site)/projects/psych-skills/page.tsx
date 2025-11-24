@@ -67,17 +67,18 @@ function ProjectHeader({
                   Request Repository Access
                 </Link>
                 
-                {/* Production Link - Coming Soon */}
-                <button 
-                  disabled
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-700 border border-neutral-600 text-neutral-500 text-sm rounded cursor-not-allowed"
-                  title="Production deployment coming soon"
+                {/* Production Link */}
+                <a 
+                  href="https://psych-skills.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white text-sm rounded transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                  Live Demo (Coming Soon)
-                </button>
+                  Visit Live Site
+                </a>
               </div>
             </div>
           </div>

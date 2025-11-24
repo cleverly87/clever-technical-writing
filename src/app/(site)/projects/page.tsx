@@ -73,9 +73,9 @@ export default function ProjectsPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-neutral-100 mb-2">Psych-Skills Healthcare SaaS</h3>
-                    <div className="inline-flex items-center gap-2 bg-orange-900/30 text-orange-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
-                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                      In Development
+                    <div className="inline-flex items-center gap-2 bg-green-900/30 text-green-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                      Live Production
                     </div>
                   </div>
                 </div>
