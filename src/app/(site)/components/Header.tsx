@@ -5,9 +5,9 @@ import { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="border-b border-neutral-800">
+    <header className="border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container flex items-center justify-between py-4">
-        <Link href="/" className="font-semibold tracking-tight">AC</Link>
+        <Link href="/" className="font-semibold tracking-tight text-xl hover:text-blue-400 transition-colors">AC</Link>
         <nav className="hidden md:flex gap-6 text-sm">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>

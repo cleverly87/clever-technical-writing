@@ -20,7 +20,7 @@ export default function PsychSkillsPrivateAccessPage() {
     const data = new FormData(form);
     
     try {
-      const res = await fetch("https://formspree.io/f/meovdbln", {
+      const res = await fetch("https://formspree.io/f/xwpgnprk", {
         method: "POST",
         headers: { "Accept": "application/json" },
         body: data

@@ -99,34 +99,34 @@ export default function ProjectsPage() {
 
               <div className="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 00-2 2m0 0V7a2 2 0 012-2h12a2 2 0 012 2v2M7 7V6a1 1 0 011-1h8a1 1 0 011 1v1" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">Portfolio Platform Architecture</h3>
-                    <div className="inline-flex items-center gap-2 bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Live Production
+                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">CTW Integration Platform</h3>
+                    <div className="inline-flex items-center gap-2 bg-orange-900/30 text-orange-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                      In Development
                     </div>
                   </div>
                 </div>
                 <p className="text-neutral-300 mb-4">
-                  Professional consultancy platform built with Next.js 14, TypeScript, and AWS infrastructure. 
-                  Demonstrates modern web development, CI/CD automation, and enterprise deployment practices.
+                  Multi-tenant SaaS platform for API management and developer onboarding. Comprehensive ecosystem 
+                  with Super Admin Dashboard, Provider Portals, and custom-branded Developer experiences.
                 </p>
                 <div className="flex items-center justify-between">
                   <Link 
-                    href="/projects/portfolio" 
-                    className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2"
+                    href="/projects/ctw-integration-platform" 
+                    className="text-purple-400 hover:text-purple-300 font-medium flex items-center gap-2"
                   >
-                    View Technical Details
+                    View Platform Details
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
-                  <span className="text-xs text-neutral-500">Full Stack</span>
+                  <span className="text-xs text-neutral-500">Multi-Tenant SaaS</span>
                 </div>
               </div>
 
@@ -234,6 +234,40 @@ export default function ProjectsPage() {
                     </svg>
                   </Link>
                   <span className="text-xs text-neutral-500">FinTech</span>
+                </div>
+              </div>
+
+              {/* Portfolio Platform Architecture */}
+              <div className="border border-neutral-800 rounded-lg p-6 hover:border-neutral-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-100 mb-2">Portfolio Platform Architecture</h3>
+                    <div className="inline-flex items-center gap-2 bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Live Production
+                    </div>
+                  </div>
+                </div>
+                <p className="text-neutral-300 mb-4">
+                  Professional consultancy platform built with Next.js 14, TypeScript, and AWS infrastructure. 
+                  Demonstrates modern web development, CI/CD automation, and enterprise deployment practices.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link 
+                    href="/projects/portfolio" 
+                    className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2"
+                  >
+                    View Technical Details
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  <span className="text-xs text-neutral-500">Full Stack</span>
                 </div>
               </div>
 
