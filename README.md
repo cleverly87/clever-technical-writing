@@ -15,5 +15,5 @@ npm run build
 npm run start
 ```
 
-## Deploy to AWS S3 + CloudFront
-Use the provided GitHub Action (`.github/workflows/deploy.yml`) to build and sync the `.next`/output or `out/` directory to S3, then invalidate CloudFront.
+## Deploy
+Hosted on Vercel, connected to this GitHub repo. Every push to `main` deploys to production at https://clever-technical-writing.com; pushes to other branches get a preview URL.
