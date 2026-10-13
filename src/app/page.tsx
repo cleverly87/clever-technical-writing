@@ -67,10 +67,10 @@ export default function HomePage() {
               emphasizes scalable architecture and comprehensive documentation that serves both human understanding 
               and AI-agent consumption. Every solution aligns technical delivery with strategic business goals.
             </p>
-            <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
               <Link 
                 href="/projects" 
-                className="border border-neutral-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-neutral-800/50 whitespace-nowrap text-center group"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/50 whitespace-nowrap text-center group"
               >
                 <span className="flex items-center justify-center gap-2">
                   View Projects
@@ -78,12 +78,6 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
-              </Link>
-              <Link 
-                href="/services" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/50 whitespace-nowrap text-center"
-              >
-                Services
               </Link>
               <Link 
                 href="/contact" 

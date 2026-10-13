@@ -49,7 +49,7 @@ function HeroSection() {
           AWS Lightsail Deployment
         </h1>
         <p className="text-xl md:text-2xl text-neutral-300 mb-8">
-          Production Infrastructure & DevOps Strategy
+          How the Platform Was Hosted in Production
         </p>
       </div>
     </div>
@@ -221,8 +221,9 @@ export default function DeploymentPage() {
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-neutral-100 mb-6">Deployment Overview</h2>
           <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-            The Swansea Harriers Rankings Platform is deployed on AWS Lightsail, providing a cost-effective 
-            and scalable solution for hosting the Flask application with professional-grade reliability.
+            The Swansea Harriers Rankings Platform was deployed on AWS Lightsail, providing a cost-effective 
+            and scalable solution for hosting the Flask application with professional-grade reliability. 
+            It is no longer hosted there; this page documents how the deployment was built and run.
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -232,7 +233,7 @@ export default function DeploymentPage() {
             </div>
             <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 border border-neutral-700 p-6 rounded-xl text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-neutral-300">Uptime Achievement</div>
+              <div className="text-neutral-300">Uptime While Live</div>
             </div>
             <div className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 border border-neutral-700 p-6 rounded-xl text-center">
               <div className="text-3xl font-bold text-emerald-400 mb-2">&lt;200ms</div>

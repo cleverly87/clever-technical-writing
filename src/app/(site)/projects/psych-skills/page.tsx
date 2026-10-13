@@ -131,8 +131,7 @@ export default function PsychSkillsProjectPage() {
           "React Hook Form",
           "Zod Validation",
           "Nodemailer",
-          "Vercel",
-          "AWS Infrastructure"
+          "Vercel"
         ]}
       />
 

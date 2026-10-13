@@ -254,8 +254,8 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <p className="text-neutral-300 mb-4">
-                  Professional consultancy platform built with Next.js 14, TypeScript, and AWS infrastructure. 
-                  Demonstrates modern web development, CI/CD automation, and enterprise deployment practices.
+                  This site: a Next.js 14 and TypeScript portfolio deployed on Vercel from GitHub, 
+                  migrated from an AWS S3, CloudFront, and Route 53 setup.
                 </p>
                 <div className="flex items-center justify-between">
                   <Link 

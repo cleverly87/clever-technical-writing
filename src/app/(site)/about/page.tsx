@@ -189,7 +189,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-neutral-100 text-center mb-12">How I Work</h2>
             <div className="text-center mb-8">
-              <p className="text-neutral-300">I approach every engagement as a complete system — from technical design to business outcome:</p>
+              <p className="text-neutral-300">I approach every project as a complete system — from technical design to business outcome:</p>
             </div>
             
             <div className="grid md:grid-cols-4 gap-8">
@@ -270,10 +270,10 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-neutral-200 mb-4">Technical Systems & DevOps</h3>
                 <ul className="space-y-2 text-neutral-300">
                   <li>• GitHub/Git/Azure DevOps CI/CD pipeline architecture</li>
-                  <li>• AWS cloud infrastructure (S3, CloudFront, Route 53, Lambda)</li>
+                  <li>• AWS cloud infrastructure (S3, CloudFront, Route 53, WAF, Lambda, Lightsail)</li>
                   <li>• Python data processing and automation systems</li>
                   <li>• TypeScript/Node.js application development</li>
-                  <li>• Next.js portfolio platforms with automated deployment</li>
+                  <li>• Next.js sites deployed on Vercel with Git-based preview deployments</li>
                   <li>• Database design and API integration patterns</li>
                 </ul>
               </div>
@@ -429,7 +429,7 @@ export default function AboutPage() {
 
             <div className="text-center mt-8">
               <p className="text-sm text-neutral-500">
-                These tools demonstrate hands-on technical execution alongside strategic consultation
+                These tools demonstrate hands-on technical execution alongside documentation strategy
               </p>
             </div>
           </div>
@@ -438,10 +438,10 @@ export default function AboutPage() {
         {/* Closing CTA */}
         <section className="py-16 px-6 bg-neutral-950">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-neutral-100 mb-8">Ready to Transform Your Documentation?</h2>
+            <h2 className="text-3xl font-bold text-neutral-100 mb-8">Get in Touch</h2>
             <p className="text-xl text-neutral-300 leading-relaxed mb-8">
-              If your organisation treats documentation as an afterthought, I can help you turn it into infrastructure — 
-              a governed, measurable, and automated system that scales with your products and your vision.
+              Whether it's a role, a collaboration, or a question about any of the projects here, 
+              I'd be glad to hear from you.
             </p>
             <Link 
               href="/contact" 

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  trailingSlash: true // Keeps existing URLs (e.g. /about/) unchanged after the move from S3
+  trailingSlash: true // URLs end in a slash, e.g. /about/
 };
 
 module.exports = nextConfig;

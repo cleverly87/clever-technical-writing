@@ -13,7 +13,6 @@ export default function Header() {
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/insights">Insights</Link>
-          <Link href="/services">Services</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <div className="flex items-center gap-3">
@@ -29,7 +28,6 @@ export default function Header() {
             <Link href="/about" onClick={() => setOpen(false)}>About</Link>
             <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
             <Link href="/insights" onClick={() => setOpen(false)}>Insights</Link>
-            <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
             <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
           </div>
         </div>
