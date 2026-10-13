@@ -50,7 +50,7 @@ function HeroSection() {
           Athletic Performance Platform
         </h1>
         <p className="text-xl md:text-2xl text-neutral-300 mb-12">
-          Complete Technical Deep Dive & Live Application Screenshots
+          Complete Technical Deep Dive & Application Screenshots
         </p>
         
         {/* Screenshot Showcase */}
@@ -103,7 +103,7 @@ function TechnicalShowcases() {
       title: "AWS Deployment",
       icon: "☁️",
       href: "/projects/swansea-harriers/deployment",
-      description: "Production deployment on AWS Lightsail with professional DevOps practices.",
+      description: "Previously deployed on AWS Lightsail with professional DevOps practices.",
       color: "orange",
       highlights: ["AWS Lightsail", "Nginx Configuration", "SSL/HTTPS", "99.9% Uptime"]
     },
@@ -284,7 +284,7 @@ export default function SwanseaHarriersOverview() {
           <div className="bg-gradient-to-br from-neutral-800/30 to-neutral-900/30 border border-neutral-700 p-8 rounded-xl">
             <h2 className="text-2xl font-bold text-neutral-100 mb-4">Project Resources</h2>
             <p className="text-neutral-300 mb-6">
-              Access the source code and explore the live application to see the Athletic Performance Platform in action.
+              Explore the project pages and request access to the source code to see how the platform was built.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

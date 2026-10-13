@@ -66,18 +66,7 @@ function ProjectHeader({
                   </svg>
                   Request Repository Access
                 </Link>
-                
-                {/* Production Link - Coming Soon */}
-                <button 
-                  disabled
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-700 border border-neutral-600 text-neutral-500 text-sm rounded cursor-not-allowed"
-                  title="Production deployment coming soon"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Live Demo (Coming Soon)
-                </button>
+
               </div>
             </div>
           </div>
@@ -119,7 +108,7 @@ export default function SwanseaHarriersProjectPage() {
         title="Swansea Harriers Analytics Platform"
         subtitle="Comprehensive athlete performance analytics system integrating Power of 10 API data with custom Python data processing, SQL database architecture, and intuitive management interfaces for coaches and team managers."
         category="Sports Analytics"
-        status="Production"
+        status="Previously Deployed"
         techStack={[
           "Python",
           "Flask",
@@ -176,7 +165,7 @@ export default function SwanseaHarriersProjectPage() {
                 </div>
                 <div className="border border-neutral-800 rounded-lg p-4 hover:border-orange-400/50 transition-colors">
                   <div className="text-2xl font-bold text-orange-400">99.9%</div>
-                  <div className="text-sm text-neutral-400">Production uptime on AWS infrastructure</div>
+                  <div className="text-sm text-neutral-400">Uptime while hosted on AWS Lightsail</div>
                 </div>
               </div>
             </div>
@@ -204,7 +193,7 @@ export default function SwanseaHarriersProjectPage() {
               <div className="text-4xl mb-4">☁️</div>
               <h3 className="text-lg font-semibold text-orange-400 mb-3">AWS Deployment</h3>
               <p className="text-neutral-300 text-sm mb-4">
-                Production deployment on AWS Lightsail with Nginx, SSL, and 99.9% uptime achievement.
+                Deployed to AWS Lightsail with Nginx and SSL, running at 99.9% uptime while live.
               </p>
               <div className="text-xs text-orange-400 font-medium">View Deployment Guide →</div>
             </Link>
@@ -290,7 +279,7 @@ export default function SwanseaHarriersProjectPage() {
             <h3 className="text-xl font-semibold text-neutral-200 mb-4">Want to See the Technical Details?</h3>
             <p className="text-neutral-300 mb-6">
               Explore comprehensive technical documentation covering system architecture, deployment strategies, 
-              algorithm implementations, and live application screenshots.
+              algorithm implementations, and application screenshots.
             </p>
             <Link 
               href="/projects/swansea-harriers/overview"

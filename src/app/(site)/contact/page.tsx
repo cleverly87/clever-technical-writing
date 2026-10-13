@@ -23,7 +23,7 @@ export default function ContactPage() {
         body: data
       });
       if (res.ok) {
-        setStatus("Thanks — I'll get back to you within 24 hours.");
+        setStatus("Thanks — I'll get back to you soon.");
         form.reset();
       } else {
         setStatus("Something went wrong. Please try again or refresh the page.");
@@ -40,10 +40,10 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="py-16 px-6 bg-neutral-950">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-neutral-100 mb-6">Let's Discuss Your Documentation Challenges</h1>
+          <h1 className="text-4xl font-bold text-neutral-100 mb-6">Get in Touch</h1>
           <p className="text-xl text-neutral-300 leading-relaxed">
-            Whether you're planning a documentation transformation or need immediate help with API docs, 
-            I'm here to help you think differently about documentation strategy.
+            Whether it's a role, a collaboration, or a question about one of my projects, 
+            I'd be glad to hear from you.
           </p>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-semibold text-neutral-100 mb-6">Start the Conversation</h2>
+              <h2 className="text-2xl font-semibold text-neutral-100 mb-6">Send a Message</h2>
               <form onSubmit={onSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">Name</label>
@@ -82,32 +82,30 @@ export default function ContactPage() {
                   <input 
                     id="company"
                     name="company" 
-                    placeholder="Your company name" 
+                    placeholder="Where you work" 
                     className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:border-blue-500 focus:outline-none transition-colors" 
                   />
                 </div>
                 <div>
-                  <label htmlFor="project-type" className="block text-sm font-medium text-neutral-300 mb-2">Project Type</label>
+                  <label htmlFor="reason" className="block text-sm font-medium text-neutral-300 mb-2">Reason for Getting in Touch</label>
                   <select 
-                    id="project-type"
-                    name="project-type" 
+                    id="reason"
+                    name="reason" 
                     className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 focus:border-blue-500 focus:outline-none transition-colors"
                   >
-                    <option value="">Select project type</option>
-                    <option value="documentation-audit">Documentation Strategy & Audit</option>
-                    <option value="api-documentation">API Documentation Architecture</option>
-                    <option value="docops-cicd">DocOps & CI/CD Implementation</option>
-                    <option value="developer-experience">Developer Experience Optimization</option>
-                    <option value="consultation">General Consultation</option>
+                    <option value="">Select a reason</option>
+                    <option value="role">Role or job opportunity</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="project-question">Question about a project</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">Project Details</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">Message</label>
                   <textarea 
                     id="message"
                     name="message" 
-                    placeholder="Tell me about your documentation challenges, current setup, and goals. The more context you provide, the better I can help." 
+                    placeholder="What would you like to talk about?" 
                     className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-500 focus:border-blue-500 focus:outline-none transition-colors h-32" 
                     required 
                   />
@@ -136,7 +134,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-200 mb-1">Quick Response</h3>
-                    <p className="text-sm text-neutral-400">I respond to all inquiries within 24 hours, usually much sooner.</p>
+                    <p className="text-sm text-neutral-400">I read every message and reply as soon as I can.</p>
                   </div>
                 </div>
                 
@@ -147,8 +145,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-200 mb-1">Detailed Proposal</h3>
-                    <p className="text-sm text-neutral-400">For project inquiries, I provide comprehensive proposals with timelines and deliverables.</p>
+                    <h3 className="font-semibold text-neutral-200 mb-1">Private Repositories</h3>
+                    <p className="text-sm text-neutral-400">Some project source code is private. You can request access from the relevant project page.</p>
                   </div>
                 </div>
                 
@@ -159,8 +157,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-200 mb-1">No-Obligation Discussion</h3>
-                    <p className="text-sm text-neutral-400">Initial consultations are always free. No pressure, just collaborative problem-solving.</p>
+                    <h3 className="font-semibold text-neutral-200 mb-1">Happy to Talk Shop</h3>
+                    <p className="text-sm text-neutral-400">Questions about API documentation, DocOps, or how a project was built are always welcome.</p>
                   </div>
                 </div>
               </div>
@@ -189,7 +187,7 @@ export default function ContactPage() {
 
               <div className="text-center">
                 <p className="text-sm text-neutral-400 mb-4">
-                  Based in Carmarthenshire, UK • Working with clients globally
+                  Based in Carmarthenshire, UK
                 </p>
                 <Link 
                   href="/insights"
